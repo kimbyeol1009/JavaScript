@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // //while문 예제
+        // let input = 1;
+        // while(input <=10){
+        //     console.log('JavaScript 재미있댜요!');
+        //     input++;
+        // }
+
+        // let num1 = 1;
+        // while(true){
+        //     console.log(num1);
+        //     num1++;
+
+        //     //조건문을 사용해서 코드를 끝내기
+        //     if(num1 ===11){
+        //         console.log('프로그램을 종료합니다');
+        //         break;
+                
+        //     }
+            
+        // }
+
+        let sum = 0;
+        while(true){
+            let inputNum = parseInt(prompt('숫자를 입력해주세요'));
+            //console.log(inputNum);
+            sum += inputNum;
+
+            if(inputNum===0){
+                console.log('프로그램을 종료합니다.');
+                break;
+                
+            }else{
+                console.log(`더한 결과 : ${sum}`);
+            }
+            
+
+        }
+
+
+    </script>
+
+    
+</body>
+</html>
