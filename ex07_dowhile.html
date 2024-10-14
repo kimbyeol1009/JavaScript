@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //do while문 예제
+        //1.do-while 문을 사용해서 10까지 출력해보기
+        //2.배수를 구하기(~100까지) ==> 입력한 숫자의 배수를 구하기
+
+        // let num = 1;
+        // do{
+        //     console.log(num);
+        //     num += 1;
+        // }while(num<=10)
+
+        let input = parsInt(prompt("숫자를 입력해주세요"));
+        let cnt = 1;
+        
+        do{
+            if(input>=100){
+                console.log("멍청아 100 이상은 안댕!");
+                
+                break;
+            }else{
+                console.log(input*cnt);
+                cnt += 1;
+            }
+        }while(input*cnt<=100)
+
+    </script>
+</body>
+</html>
