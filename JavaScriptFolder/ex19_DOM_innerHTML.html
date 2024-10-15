@@ -18,14 +18,17 @@
         let divVal = document.getElementById('divTag');
         
         // 2. 함수 별로 가지고 온 내용을 div 안에 누적하기
+        // 3. 함수 선언부안에 로직을 작성
+        // divVal -> innerHTML을 활용해서 텍스트를 누적
+        
         const mkH1 = ()=>{
-            
+            divVal.innerHTML += '<h1>DOM 활용하기!</h1>';
         }
         const mkA = () => {
-
+            divVal.innerHTML += '<a>Google로 이동!</a>'
         }
         const mkUl = () =>{
-
+            divVal.innerHTML += '<ul><li>HTML</li><li>CSS</li><li>JS</li></ul>'
         }
     </script>
 </body>

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <img src = "https://i.pinimg.com/736x/dd/71/73/dd71733dde0aa61dd89df96ab864214d.jpg"
+    width = "300px"
+    id = "imgId"
+    class="imgClass"
+
+    >
+    <br>
+    <button>이미지 변경</button>
+    <script>
+        let src1 = "https://i.pinimg.com/736x/dd/71/73/dd71733dde0aa61dd89df96ab864214d.jpg";
+        let src2 = "https://i.pinimg.com/736x/7d/a3/98/7da398cafea9f51be8975a2816096f68.jpg";
+        let btn = document.querySelector('button');
+
+        btn.addEventListener('click', ()=>{
+            //이미지 요소 가져오기
+
+            let img = document.getElementById('imgId');
+            img = document.getElementsByClassName('imgClass')[0];
+            img = document.querySelector('img');
+            img = document.querySelector('#imgId');
+            img = document.querySelector('.imgClass');
+
+            //src속성을 비교해서 
+            if(img.src === src1){
+                img.src = src2;
+            }else{
+                img.src = src1;
+            }
+        })
+    </script>
+</body>
+</html>

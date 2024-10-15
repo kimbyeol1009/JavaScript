@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p id = 'num'>0</p>
+    <input type ="button" value = "증가" onclick="increase()">
+    <input type ="button" value = "감소" onclick = "decrease()">
+
+    <script>
+        let num = document.getElementById('num');
+        const increase = ()=>{
+            // p요소객체의 콘텐츠(내용)을 +1을 적용하여 초기화
+            num.innerText = parseInt(num.innerText)+1;
+           console.log(num.innerText);
+           
+            
+        }
+        const decrease = () => {
+            if(num.innerText>0){
+                num.innerText = parseInt(num.innerText)-1;
+            }
+        }
+    </script>
+</body>
+</html>

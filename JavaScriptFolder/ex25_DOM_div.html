@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div{
+            width: 100px;
+            height : 100px;
+        }
+        #redBox{
+            background-color: red;
+        }#blueBox{
+            background-color: blue;
+            
+        }#greenBox{
+            background-color: green;
+            
+        }#grayBox{
+            background-color: gray;
+            
+        }
+        
+        
+    </style>
+</head>
+
+<body>
+    <div id = "redBox"></div>
+    <div id = "blueBox"></div>
+    <div id = "greenBox"></div>
+    <div id = "grayBox"></div>
+    <button class="move">이동하기!</button>
+    <button class = "radius">둥글게!</button>
+
+    <script>
+        //이동하기 버튼을 클릭 할 때, 요소명.style.property = 값
+        //블루색상 제외하고 나머지 색상의 요소정보, 버튼 요소정보들도 가지고 오기
+        let blue = document.getElementById('blueBox');
+        let red = document.getElementById('redBox');
+        let green = document.getElementById('greenBox');
+        let gray = document.getElementById('grayBox');
+        let move = document.querySelector('.move');
+        let radius = document.querySelector('.radius');
+
+        //이동하기 버튼을 클릭했을 때 red색상을 제외한 나머지 div요소들을 옮기기
+        //요소명.style.property = '값' 설정
+
+        //둥글게 버튼을 클릭했을 때 ==> 적용할 속성
+        //borderTopRightRadius = '50%'
+        //borderBottomLeftRadius = '50%'
+        //응용단계 ==> querySelectorAll ==> 유사배열 ==> NodeList
+        //유사배열 ==> 반복문을 활용해서 속성 값 넣어보기
+        move.addEventListener('click',()=>{
+            blue.style.marginLeft = '100px';
+            green.style.marginLeft = '200px';
+            gray.style.marginLeft = '300px';
+        })
+
+            radius.addEventListener('click',()=>{
+            blue.style.borderTopRightRadius = "50%";
+            blue.style.borderBottomLeftRadius = "50%";
+
+            red.style.borderTopRightRadius = "50%";
+            red.style.borderBottomLeftRadius = "50%";
+
+            green.style.borderTopRightRadius = "50%";
+            green.style.borderBottomLeftRadius = "50%";
+
+            gray.style.borderTopRightRadius = "50%";
+            gray.style.borderBottomLeftRadius = "50%";
+        })
+        let radiusList = document.querySelectorAll("div");
+         for(let i = 0; i < radiusList.length; i++){
+             console.log(radiusList[i]);
+         }
+         for(let i = 0; i<radiusList.length; i++){
+            radiusList[i].style.borderTopRightRadius = '50%';
+            radiusList[i].style.borderBottomLeftRadius = '50%';
+         }
+
+
+    </script>
+</body>
+</html>
